@@ -1,9 +1,8 @@
 ---
-Title: "Hong Kong Population Center of Gravity"
-Author: "Fung YIP"
+title: "Hong Kong Population Center of Gravity"
+author: "Fung YIP"
 date: "23 October 2016"
-Analytics: 
-  GIS: Geocoding, Points-in-Polygon, Line Distance
+output: html_document
 ---
 
 ## Introduction
@@ -59,7 +58,8 @@ Hong Kong is divided into 431 District Council Constituency Areas under 18 Distr
 
 ####2.2 Data Manipulation - to create two working files from Hong Kong Census in order to derive the HK Population COG.
 
-```{r Data Manipulation, echo=TRUE, eval=FALSE, message=FALSE, warning=FALSE}
+
+```r
 library(ggmap)
 library(dplyr)
 library(xlsx)
@@ -130,8 +130,8 @@ write.xlsx(data_2001_a,"./DataOut/COG_2001_a.xlsx")
 &nbsp; 
 
 ####2.3 Analysis Results - Hong Kong Population Center of Gravity
-```{r Hong Kong Population Center of Gravity , echo=TRUE, eval=FALSE, message=FALSE, warning=FALSE}
 
+```r
 ####2.3 Analysis Results - Hong Kong Population Center of Gravity####
 sum_2011<-colSums(data_2011_a[,-1])
 sum_2001<-colSums(data_2001_a[,-1])
@@ -146,7 +146,8 @@ centerofgravity_2001_lat<- sum_2001[5:5]/sum_2001[1:1]
 &nbsp; 
 
 ####2.4 Points-in-Polygon - Where is the HK Population COG in terms of District and Area?
-```{r Where? , echo=TRUE, eval=FALSE, message=FALSE, warning=FALSE}
+
+```r
 # install.packages("rgdal")
 require(sp)
 require(rgdal)
@@ -186,7 +187,6 @@ POI$District <- over(POI,hk.map_sp)$DISTRICT_E
 
 POI$Area
 POI$District
-
 ```
 
 
@@ -195,7 +195,8 @@ POI$District
 
 ####2.5 Line Distance - Distance between HK Population COG in 2011 and 2001
 
-```{r Distance , echo=TRUE, eval=FALSE, message=FALSE, warning=FALSE}
+
+```r
 #####2.5 Line Distance - Distance between HK Population COG in 2011 and 2001####
 #install.packages("McSpatial")
 library(McSpatial)
@@ -210,7 +211,8 @@ dis_km
 &nbsp; 
 
 ##3. Data visualization - Hong Kong Population Center of Gravity
-```{r Data visualization , echo=TRUE, eval=FALSE, message=FALSE, warning=FALSE}
+
+```r
 # install.packages("rgeos")
 library(rgeos)
 library(sp)

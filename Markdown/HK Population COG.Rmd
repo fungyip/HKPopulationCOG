@@ -1,9 +1,8 @@
 ---
-Title: "Hong Kong Population Center of Gravity"
-Author: "Fung YIP"
+title: "Hong Kong Population Center of Gravity"
+author: "Fung YIP"
 date: "23 October 2016"
-Analytics: 
-  GIS: Geocoding, Points-in-Polygon, Line Distance
+output: html_document
 ---
 
 ## Introduction
