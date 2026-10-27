@@ -14,7 +14,7 @@ of the original R execution environment (no R runtime was available).
 | 2011 centre | (22.35215, 114.1501) in README prose | (22.353321, 114.151562) | Not reproduced as stated — see below |
 | 2011 centre (`poi.csv`) | (114.151562, 22.353321) | (114.151562, 22.353321) | Reproduced (exact) |
 | 2001 centre | (22.38664, 114.1116) in README prose | (22.387307, 114.114203) | Reproduced with qualifications — see below |
-| Shift 2001 → 2011 | ~5,500 m | 5,388.8 m (Haversine) | Reproduced with qualifications |
+| Shift 2001 → 2011 | ~5,500 m | 5,388.8 m (Haversine) | Superseded — see below |
 | Direction | "southward" | bearing 134.5° (south-east) | Superseded — see below |
 
 ## Computed centres
@@ -61,6 +61,14 @@ methodological caveat.
 3. **Direction.** The README describes the shift as "southward". The computed
    bearing is 134.5°, i.e. south-east. The magnitude (≈5.4 km) is consistent
    with the "~5,500 m" claim; the direction wording is imprecise.
+
+4. **Gross geocoding error dominates the shift.** The 2001 area "North - Yan Do"
+   (population 27,722) is cached at (104.0225, 30.6958) — Sichuan province,
+   mainland China, ~1,300 km from Hong Kong. Excluding this single point moves
+   the 2001 centre from (114.1142, 22.3873) to (114.1562, 22.3527), leaving a
+   2001→2011 movement of only **~481 m at bearing ~278°**. The published
+   "~5,500 m southward" shift is therefore largely an artifact of one
+   geocoding error. See `../docs/methodology-review.md`.
 
 ## Known limitations affecting these numbers
 
