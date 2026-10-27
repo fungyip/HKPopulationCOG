@@ -1,0 +1,7 @@
+reference_period,method_id,included_population,excluded_population,centre_longitude,centre_latitude,difference_from_legacy_m,notes
+2011,legacy,7070388,0,114.151562,22.353321,0.0,WGS84 degree average; reproduces original
+2011,projected,7070388,0,114.151575,22.353339,2.5,HK 1980 Grid (EPSG:2326) mean centre
+2011,projected_coverage_corrected,7070388,0,114.151575,22.353339,2.5,projected + coverage correction
+2001,legacy,6690206,0,114.114203,22.387307,0.0,WGS84 degree average; reproduces original
+2001,projected,6690206,0,114.117041,22.388994,347.0,HK 1980 Grid (EPSG:2326) mean centre
+2001,projected_coverage_corrected,6662484,27722,114.156205,22.352752,5780.8,projected; removed 'North - Yan Do' geocoding error

@@ -32,16 +32,17 @@ cached `DataOut/COG_*.xlsx` files.
 
 ```bash
 python reproduction/scripts/reproduce_legacy.py
+python reproduction/scripts/compare_methods.py
 ```
 
-Requirements: Python 3.12 with `pandas` and `openpyxl`.
+Requirements: Python 3.12 with `pandas`, `openpyxl`, and `pyproj`.
 
-The script writes:
+The first script writes:
 
 - `reports/historical-centres.csv`
 - `reports/coverage-summary.csv`
 
-and prints the same values to stdout.
+The second writes `reports/method-comparison.csv`. Both print to stdout.
 
 ## Layout
 
@@ -50,13 +51,17 @@ reproduction/
   README.md
   scripts/
     reproduce_legacy.py
+    compare_methods.py
   reports/
     legacy-reproduction.md
     historical-centres.csv
     coverage-summary.csv
+    method-comparison.md
+    method-comparison.csv
 ```
 
 ## Status
 
-See `reports/legacy-reproduction.md` for the per-finding reproduction status
-and `../docs/methodology-review.md` (future) for the audit of limitations.
+See `reports/legacy-reproduction.md` for the per-finding reproduction status,
+`reports/method-comparison.md` for the legacy-vs-revised comparison, and
+`../docs/methodology-review.md` for the audit of limitations.
