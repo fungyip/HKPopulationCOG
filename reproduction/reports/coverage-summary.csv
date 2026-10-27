@@ -1,0 +1,3 @@
+reference_period,census_areas,analysed_areas,missing_areas,census_population,analysed_population,excluded_population,unique_coordinate_pairs,duplicated_coordinate_pairs,areas_on_duplicated_coordinates
+2011,412,412,,7070388,7070388,0,342,38,108
+2001,390,389,Islands - Cheung Chau North,6702494,6690206,12288,331,27,85

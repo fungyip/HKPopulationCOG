@@ -1,0 +1,4 @@
+reference_period,method_id,centre_longitude,centre_latitude,distance_from_legacy_m,bearing_from_2001_deg
+2011,legacy,114.151562,22.353321,,
+2001,legacy,114.114203,22.387307,,
+2011,legacy_shift,114.151562,22.353321,5388.8,134.5
